@@ -9,4 +9,5 @@ public class User {
     private String pw;
     private String email;
     private String name;
+    private String board_id;
 }

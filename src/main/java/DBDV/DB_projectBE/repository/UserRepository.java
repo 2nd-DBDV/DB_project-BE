@@ -23,7 +23,7 @@ public class UserRepository {
     }
 
     public IsSuccessDto insertUser(UserDto userDto) throws DuplicateKeyException{
-        jdbcTemplate.update("insert into USER " + "values (?, ?, ?, ?, ?, ?, ?, ?, ?)", 1, userDto.getId(), userDto.getPw(), userDto.getName(), 0, userDto.getEmail(), 0, 0, 0);
+        jdbcTemplate.update("insert into USER " + "values (?, ?, ?, ?, ?, ?, ?, ?, ?)", 1, userDto.getId(), userDto.getPw(), userDto.getName(), 0, userDto.getEmail(), 0, userDto.getBoard_id(), 0);
         return new IsSuccessDto(true);
     }
 }
